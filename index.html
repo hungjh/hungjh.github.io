@@ -45,7 +45,7 @@
 			<img src="" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		  <h1 class="header-author"><a href="/">hungjh</a></h1>
 		</hgroup>
 		
 
@@ -99,7 +99,7 @@
 				<img src="" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">John Doe</h1>
+			  <h1 class="header-author js-header-author">hungjh</h1>
 			</hgroup>
 			
 			
@@ -142,6 +142,116 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-新人小白怎么用github和hexo部署个人博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/13/%E6%96%B0%E4%BA%BA%E5%B0%8F%E7%99%BD%E6%80%8E%E4%B9%88%E7%94%A8github%E5%92%8Chexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">新人小白怎么用github和hexo部署个人博客</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/13/%E6%96%B0%E4%BA%BA%E5%B0%8F%E7%99%BD%E6%80%8E%E4%B9%88%E7%94%A8github%E5%92%8Chexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
+  	<time datetime="2019-12-13T13:53:39.077Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="小白如何通过GitHub和hexo搭建个人博客"><a href="#小白如何通过GitHub和hexo搭建个人博客" class="headerlink" title="小白如何通过GitHub和hexo搭建个人博客"></a>小白如何通过GitHub和hexo搭建个人博客</h1><h3 id="一-搭建环境"><a href="#一-搭建环境" class="headerlink" title="一.搭建环境"></a>一.搭建环境</h3><p>搭建完成个人博客需要node.js，hexo，GitHub个人账号，没有的话，自己去注册一个就好了</p>
+<h3 id="二-安装node-js"><a href="#二-安装node-js" class="headerlink" title="二.安装node.js"></a>二.安装node.js</h3><h5 id="1-下载node-js"><a href="#1-下载node-js" class="headerlink" title="1.下载node.js"></a>1.下载node.js</h5><p>下载地址</p>
+<p>一直点击确定就可以了，注意</p>
+<p><img src="F:%5C%E9%9A%BE%E7%82%B9%5Css%5C2267589-b87cc08121e1c880.png" alt=""></p>
+<p>安装完成后，在键盘按下【win+r】键，输入cmd，打开cmd窗口，输入</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">node -v   #输入node -v显示当前版本号，说明node.js安装成功</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">npm -v      #输入npm -v显示npm的版本号，说明自带的npm安装成功</span></pre></td></tr></table></figure>
+
+<h5 id="2-环境配置"><a href="#2-环境配置" class="headerlink" title="2.环境配置"></a>2.环境配置</h5><p>安装完成后在当前文件夹下面新创建两个文件夹【node_global】和【node_cache】,如下图</p>
+<p>创建完成后，在命令行输入</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">npm <span class="built_in">config</span> <span class="built_in">set</span> prefix <span class="string">"E:\myprogram\nodes\node_global"</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">npm <span class="built_in">config</span> <span class="built_in">set</span> cache <span class="string">"E:\myprogram\nodes\node_cache"</span></span></pre></td></tr></table></figure>
+
+<p>接下来配置环境变量</p>
+<p>右键点击【我的电脑】-&gt;【属性】-&gt;【高级系统设置】</p>
+<p><img src="C:%5CUsers%5CAdministrator.PC-20190606MGJC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1576200924274.png" alt="1576200924274"></p>
+<p>在系统变量下面点击【新建】，变量名为【NODE_PATH】,变量值为【E:\myprogram\nodes\node_global\node_modules】，在【PATH】中加入【E:\myprogram\nodes\】</p>
+<p>在用户变量中选中【PATH】,添加【E:\myprogram\nodes\node_global;】</p>
+<p>这样，node.js就安装完成了</p>
+<h5 id="3-测试"><a href="#3-测试" class="headerlink" title="3.测试"></a>3.测试</h5><p>配置完成后，安装个module测试一下，打开cmd窗口，输入</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">npm install myexpress -g</span></pre></td></tr></table></figure>
+
+<p><img src="C:%5CUsers%5CAdministrator.PC-20190606MGJC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1576207560837.png" alt="1576207560837"></p>
+<h3 id="三-安装hexo"><a href="#三-安装hexo" class="headerlink" title="三.安装hexo"></a>三.安装hexo</h3><h5 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">#通过淘宝的镜像源安装比较快一点</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span></pre></td></tr></table></figure>
+
+<p>安装完成后用 hexo -v来查看是否安装成功</p>
+<h5 id="2-初始化"><a href="#2-初始化" class="headerlink" title="2.初始化"></a>2.初始化</h5><p>新建文件夹【blog】</p>
+<p>在自己文件夹上方打开cmd</p>
+<p><img src="C:%5CUsers%5CAdministrator.PC-20190606MGJC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1576242475116.png" alt="1576242475116"></p>
+<p>输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">hexo init #初始化</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">hexo g    #生成静态html页面</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">hexo s   #在本地启动服务</span></pre></td></tr></table></figure>
+
+<h3 id="四-部署到github"><a href="#四-部署到github" class="headerlink" title="四.部署到github"></a>四.部署到github</h3><p>登录github，选择【New repository】</p>
+<p><img src="C:%5CUsers%5CAdministrator.PC-20190606MGJC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1576242902667.png" alt="1576242902667"></p>
+<p><img src="C:%5CUsers%5CAdministrator.PC-20190606MGJC%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1576244270820.png" alt="1576244270820"></p>
+<p>在repository name 中填入【你的昵称.github.io】，点击下方的确定。</p>
+<p>安装hexo-deployer-git插件</p>
+<p>继续在当前命令行中输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">cnpm install --save-deployer-git</span></pre></td></tr></table></figure>
+
+<p>设置_config.yml，继续在命令行中输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">notepad _config.yml</span></pre></td></tr></table></figure>
+
+<p>在最下方的deploy输入</p>
+<p>type: ‘git’<br>  repo: ‘<a href="https://github.com/hungjh/hungjh.github.io.git&#39;" target="_blank" rel="noopener">https://github.com/hungjh/hungjh.github.io.git&#39;</a><br>  branch: master</p>
+<p>然后就可以部署到远端了，用命令行输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">hexo d</span></pre></td></tr></table></figure>
+
+<p>五.写博客</p>
+<p>系统会自动生成一篇写博客的文章，这里我就不写了。后面如果想继续写的话推荐一个写博客的软件叫【typora】就可以了</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/13/%E6%96%B0%E4%BA%BA%E5%B0%8F%E7%99%BD%E6%80%8E%E4%B9%88%E7%94%A8github%E5%92%8Chexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-我的第一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -205,81 +315,6 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/30/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/30/hello-world/" class="archive-article-date">
-  	<time datetime="2019-11-30T07:42:23.293Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo server</span></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo generate</span></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/30/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -290,7 +325,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 John Doe
+    		&copy; 2019 hungjh
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
